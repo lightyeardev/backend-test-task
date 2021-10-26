@@ -20,7 +20,10 @@ class AccountRepositoryJooqIntSpec extends AbstractIntegrationSpec {
 
         then:
             result.isPresent()
-            result.get() == account
+            result.get().id() == account.id()
+            result.get().name() == account.name()
+            result.get().version() == account.version()
+            result.get().state() == account.state()
     }
 
     def "should not find account that does not exist"() {
