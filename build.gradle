@@ -1,0 +1,57 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'groovy'
+    id 'com.revolut.jooq-docker' version '0.3.7'
+}
+
+group = 'com.golightyear'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-jooq'
+
+    implementation 'org.jooq:jooq'
+    jdbc 'org.postgresql:postgresql'
+    implementation 'org.postgresql:postgresql'
+    implementation 'org.flywaydb:flyway-core:7.14.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'org.spockframework:spock-spring:2.0-groovy-3.0'
+    testImplementation 'cglib:cglib-nodep:3.3.0'
+    testImplementation 'org.testcontainers:testcontainers:1.16.0'
+    testImplementation 'org.testcontainers:postgresql:1.16.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks {
+    generateJooqClasses {
+        schemas = ["public"]
+        basePackageName = "com.lightyear.generated"
+        excludeFlywayTable = true
+    }
+}
+
+build.dependsOn clean
+build.dependsOn generateJooqClasses
