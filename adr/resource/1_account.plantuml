@@ -1,0 +1,16 @@
+@startuml
+
+package {
+
+    entity account {
+        * id
+        * version
+        * name
+        * state {ACTIVE, INACTIVE}
+        * create_time
+        * last_modified
+    }
+
+}
+
+@enduml
