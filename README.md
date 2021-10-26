@@ -15,7 +15,9 @@ Then:
 * Open http://localhost:8080/account/
 
 ## Testing
-All tests (unit and integration) share the same test folder `src/test/groovy`.
+* All tests (unit and integration) share the same test folder `src/test/groovy`.
+* Some tests have been provided as 
+* Run tests with: `./gradlew test`
 
 ### Unit tests
 * All unit tests should end with `Spec`, e.g. `AccountServiceSpec.groovy`.
