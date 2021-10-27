@@ -1,4 +1,4 @@
-# Account:
+# Account
 
 ## ER:
 ![](https://github.com/lightyeardev/backend-test-task/blob/main/adr/resource/1_account.svg?raw=true)
