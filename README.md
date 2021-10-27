@@ -14,6 +14,10 @@ Then:
 * Start Application: `./gradlew clean bootRun`
 * Open http://localhost:8080/account/
 
+## Documentation
+* You can find documentation in the [ADR folder](https://github.com/lightyeardev/backend-test-task/tree/main/adr)
+* Feel free to add your own to the folder
+
 ## Testing
 * All tests (unit and integration) share the same test folder `src/test/groovy`.
 * Some tests have been provided as 
