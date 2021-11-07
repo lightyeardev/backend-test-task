@@ -1,14 +1,10 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.6'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version "${springBootVersion}"
     id 'java'
     id 'groovy'
-    id 'com.revolut.jooq-docker' version '0.3.7'
 }
 
-group = 'com.golightyear'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '15'
 
 configurations {
     compileOnly {
@@ -21,13 +17,18 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-jooq'
+    annotationProcessor enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+    implementation enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+    runtimeOnly enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+    testImplementation enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+    testAnnotationProcessor enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 
-    implementation 'org.jooq:jooq'
-    jdbc 'org.postgresql:postgresql'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+
     implementation 'org.postgresql:postgresql'
     implementation 'org.flywaydb:flyway-core:7.14.1'
+    implementation "net.logstash.logback:logstash-logback-encoder:5.2"
 
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
@@ -45,13 +46,4 @@ test {
     useJUnitPlatform()
 }
 
-tasks {
-    generateJooqClasses {
-        schemas = ["public"]
-        basePackageName = "com.lightyear.generated"
-        excludeFlywayTable = true
-    }
-}
-
 build.dependsOn clean
-build.dependsOn generateJooqClasses
