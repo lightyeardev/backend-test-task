@@ -1,6 +1,7 @@
 package com.golightyear.backend.account;
 
 import com.golightyear.backend.account.domain.Account;
+import com.golightyear.backend.account.domain.AccountBalance;
 import com.golightyear.backend.account.domain.AccountId;
 
 import java.util.List;
@@ -14,4 +15,7 @@ public interface AccountRepository {
 
     Optional<Account> find(AccountId id);
 
+    boolean addBalance(AccountId accountId, AccountBalance balance);
+
+    boolean removeBalance(AccountId accountId, AccountBalance balance);
 }

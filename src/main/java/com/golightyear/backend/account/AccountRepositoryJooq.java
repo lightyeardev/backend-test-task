@@ -1,9 +1,6 @@
 package com.golightyear.backend.account;
 
-import com.golightyear.backend.account.domain.Account;
-import com.golightyear.backend.account.domain.AccountId;
-import com.golightyear.backend.account.domain.AccountName;
-import com.golightyear.backend.account.domain.AccountState;
+import com.golightyear.backend.account.domain.*;
 import com.lightyear.generated.tables.records.AccountRecord;
 import org.jooq.DSLContext;
 import org.springframework.stereotype.Component;
@@ -41,6 +38,22 @@ public class AccountRepositoryJooq implements AccountRepository {
         return context.selectFrom(ACCOUNT)
                 .where(ACCOUNT.ID.eq(id.value()))
                 .fetchOptional(AccountRepositoryJooq::mapRecord);
+    }
+
+    @Override
+    public boolean addBalance(AccountId accountId, AccountBalance balance) {
+        return context.update(ACCOUNT)
+                .set(ACCOUNT.BALANCE, ACCOUNT.BALANCE.plus(balance.value()))
+                .where(ACCOUNT.ID.eq(accountId.value()))
+                .execute() > 0;
+    }
+
+    @Override
+    public boolean removeBalance(AccountId accountId, AccountBalance balance) {
+        return context.update(ACCOUNT)
+                .set(ACCOUNT.BALANCE, ACCOUNT.BALANCE.minus(balance.value()))
+                .where(ACCOUNT.ID.eq(accountId.value()))
+                .execute() > 0;
     }
 
     private static AccountRecord toRecord(Account account) {
