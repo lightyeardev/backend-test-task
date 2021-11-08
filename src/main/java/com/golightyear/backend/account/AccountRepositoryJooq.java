@@ -8,6 +8,7 @@ import com.lightyear.generated.tables.records.AccountRecord;
 import org.jooq.DSLContext;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -49,7 +50,8 @@ public class AccountRepositoryJooq implements AccountRepository {
                 account.name().value(),
                 account.state().name(),
                 LocalDateTime.ofInstant(account.createTime(), UTC),
-                LocalDateTime.ofInstant(account.lastModified(), UTC)
+                LocalDateTime.ofInstant(account.lastModified(), UTC),
+                BigDecimal.ZERO
         );
     }
 

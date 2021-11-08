@@ -9,6 +9,7 @@ public class AccountResponse {
 
     AccountId id;
     AccountName name;
+    AccountBalance balance;
     AccountState state;
     Instant createTime;
     Instant lastModified;
@@ -17,6 +18,7 @@ public class AccountResponse {
         return new AccountResponse(
                 account.id(),
                 account.name(),
+                account.balance(),
                 account.state(),
                 account.createTime(),
                 account.lastModified()

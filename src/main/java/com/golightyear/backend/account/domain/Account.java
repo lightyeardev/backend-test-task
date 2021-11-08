@@ -23,6 +23,9 @@ public class Account {
     AccountState state = ACTIVE;
 
     @Builder.Default
+    AccountBalance balance = new AccountBalance("0.00");
+
+    @Builder.Default
     Instant createTime = Instant.now();
 
     @Builder.Default

@@ -1,0 +1,1 @@
+ALTER TABLE account ADD COLUMN balance NUMERIC(10,2) NOT NULL DEFAULT 0 CHECK (balance >= 0);
