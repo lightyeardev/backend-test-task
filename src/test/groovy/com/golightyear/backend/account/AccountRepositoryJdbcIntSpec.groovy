@@ -2,17 +2,18 @@ package com.golightyear.backend.account
 
 import com.golightyear.backend.AbstractIntegrationSpec
 import com.golightyear.backend.account.domain.AccountId
+import com.golightyear.backend.account.domain.AccountState
 import com.golightyear.backend.testdata.AccountTestData
 import org.springframework.beans.factory.annotation.Autowired
 
-class AccountRepositoryJooqIntSpec extends AbstractIntegrationSpec {
+class AccountRepositoryJdbcIntSpec extends AbstractIntegrationSpec {
 
     @Autowired
     AccountRepository accountRepository
 
     def "should add and find account"() {
         given:
-            def account = new AccountTestData().build()
+            def account = new AccountTestData(state: AccountState.INACTIVE).build()
 
         when:
             accountRepository.add(account)
