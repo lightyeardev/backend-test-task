@@ -1,5 +1,6 @@
 package com.golightyear.backend.infrastructure.persistence;
 
+import com.golightyear.backend.common.SerializableValue;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
@@ -27,6 +28,10 @@ public class TypeConvertingParameterSource implements SqlParameterSource {
 
         if (value instanceof Instant) {
             return Timestamp.from((Instant) value);
+        }
+
+        if (value instanceof SerializableValue<?>) {
+            return ((SerializableValue<?>) value).value();
         }
 
         return value;

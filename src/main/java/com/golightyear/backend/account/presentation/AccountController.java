@@ -1,7 +1,7 @@
 package com.golightyear.backend.account.presentation;
 
 import com.golightyear.backend.account.application.AccountService;
-import com.golightyear.backend.account.domain.Account;
+import com.golightyear.backend.account.domain.account.Account;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -46,5 +46,11 @@ public class AccountController {
             .map(BalanceResponse::from)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+    }
+
+    @PostMapping("/{id}/transfer")
+    public ResponseEntity<TransferResponse> transfer(@PathVariable("id") String id, @RequestBody TransferRequest request) {
+        var result = accountService.transfer(id, request.target(), request.amount());
+        return ok(TransferResponse.from(result));
     }
 }

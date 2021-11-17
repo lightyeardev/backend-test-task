@@ -1,5 +1,6 @@
 package com.golightyear.backend.account.domain
 
+import com.golightyear.backend.account.domain.account.AccountName
 import spock.lang.Specification
 
 class AccountNameSpec extends Specification {

@@ -1,10 +1,9 @@
-package com.golightyear.backend.account.infrastructure.account
+package com.golightyear.backend.infrastructure.persistence.account
 
 import com.golightyear.backend.AbstractIntegrationSpec
-import com.golightyear.backend.account.domain.Account
-import com.golightyear.backend.account.domain.AccountId
-import com.golightyear.backend.account.domain.AccountState
-import com.golightyear.backend.account.domain.AccountRepository
+import com.golightyear.backend.account.domain.account.AccountId
+import com.golightyear.backend.account.domain.account.AccountState
+import com.golightyear.backend.account.domain.account.AccountRepository
 import com.golightyear.backend.testdata.AccountTestData
 import org.springframework.beans.factory.annotation.Autowired
 

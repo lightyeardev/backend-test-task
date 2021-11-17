@@ -2,20 +2,16 @@ package com.golightyear.backend.account.presentation
 
 import com.golightyear.backend.AbstractIntegrationSpec
 import com.golightyear.backend.account.application.AccountService
-import com.golightyear.backend.account.domain.AccountRepository
-import com.golightyear.backend.account.domain.AccountId
-import com.golightyear.backend.account.domain.AccountName
-import com.golightyear.backend.account.domain.BalanceAmount
-import com.golightyear.backend.account.domain.BalanceRepository
+import com.golightyear.backend.account.domain.account.AccountId
+import com.golightyear.backend.account.domain.account.AccountName
+import com.golightyear.backend.account.domain.balance.BalanceRepository
+import com.golightyear.backend.account.domain.transaction.TransactionRepository
 import com.golightyear.backend.testdata.AccountTestData
-import com.golightyear.backend.testdata.BalanceTestData
 import org.spockframework.spring.SpringSpy
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.web.servlet.MockMvc
 
-import java.sql.SQLException
-
-import static com.golightyear.backend.account.domain.AccountState.INACTIVE
+import static com.golightyear.backend.account.domain.account.AccountState.INACTIVE
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
@@ -31,6 +27,9 @@ class AccountControllerIntSpec extends AbstractIntegrationSpec {
 
     @Autowired
     AccountService accountService
+
+    @SpringSpy
+    TransactionRepository transactionRepository
 
     def "should throw an exception"() {
         given:
@@ -119,5 +118,35 @@ class AccountControllerIntSpec extends AbstractIntegrationSpec {
                     }
                 """.formatted(account.id().value()))
                 )
+    }
+
+    def "should not debit or credit balances when exception occurs"() {
+        given:
+            def anAccount = accountService.create("Lightyear")
+            def anAccountBalance = balanceRepository.find(anAccount.id()).get()
+            balanceRepository.add(anAccountBalance.credit(new BigDecimal(200)))
+
+            def anotherAccount = accountService.create("Go Lightyear")
+        and:
+            def request = """
+                    {
+                        "target": "%s",
+                        "amount": 100
+                    }
+                """.formatted(anotherAccount.id().value().toString())
+        when:
+            mvc
+                .perform(
+                    post('/account/' + anAccount.id().value() + '/transfer')
+                        .content(request)
+                        .contentType("application/json")
+                )
+
+        then:
+            transactionRepository.add(_) >> { throw new Exception() }
+        and:
+            thrown(Exception)
+            balanceRepository.find(anAccount.id()).present
+            balanceRepository.find(anAccount.id()).get().amount().value() == 200
     }
 }

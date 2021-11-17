@@ -1,11 +1,13 @@
 package com.golightyear.backend.config;
 
-import com.golightyear.backend.account.domain.AccountRepository;
-import com.golightyear.backend.account.domain.BalanceRepository;
+import com.golightyear.backend.account.domain.account.AccountRepository;
+import com.golightyear.backend.account.domain.balance.BalanceRepository;
+import com.golightyear.backend.account.domain.transaction.TransactionRepository;
 import com.golightyear.backend.infrastructure.persistence.account.AccountRepositoryJdbc;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
 import com.golightyear.backend.infrastructure.persistence.ParamsConvertingJdbcOperations;
 import com.golightyear.backend.infrastructure.persistence.balance.BalanceRepositoryJdbc;
+import com.golightyear.backend.infrastructure.persistence.transaction.TransactionRepositoryJdbc;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
@@ -26,5 +28,10 @@ public class JdbcRepositoryConfig {
     @Bean
     public BalanceRepository balanceRepository(ApplicationJdbcOperations jdbcOperations) {
         return new BalanceRepositoryJdbc(jdbcOperations);
+    }
+
+    @Bean
+    public TransactionRepository transactionRepository(ApplicationJdbcOperations jdbcOperations) {
+        return new TransactionRepositoryJdbc(jdbcOperations);
     }
 }

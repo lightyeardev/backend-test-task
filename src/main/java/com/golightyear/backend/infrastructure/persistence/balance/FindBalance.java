@@ -1,7 +1,7 @@
 package com.golightyear.backend.infrastructure.persistence.balance;
 
-import com.golightyear.backend.account.domain.AccountId;
-import com.golightyear.backend.account.domain.Balance;
+import com.golightyear.backend.account.domain.account.AccountId;
+import com.golightyear.backend.account.domain.balance.Balance;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;

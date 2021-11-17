@@ -1,4 +1,4 @@
-package com.golightyear.backend.account.domain;
+package com.golightyear.backend.account.domain.balance;
 
 import com.golightyear.backend.common.SerializableValue;
 import lombok.Value;
@@ -20,5 +20,13 @@ public class BalanceAmount implements SerializableValue<BigDecimal> {
     @Override
     public BigDecimal value() {
         return value;
+    }
+
+    public BalanceAmount add(BigDecimal amount) {
+        return new BalanceAmount(this.value.add(amount));
+    }
+
+    public BalanceAmount subtract(BigDecimal amount) {
+        return new BalanceAmount(this.value.subtract(amount));
     }
 }

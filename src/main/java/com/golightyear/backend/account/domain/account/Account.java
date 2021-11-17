@@ -1,11 +1,11 @@
-package com.golightyear.backend.account.domain;
+package com.golightyear.backend.account.domain.account;
 
 import lombok.Builder;
 import lombok.Value;
 
 import java.time.Instant;
 
-import static com.golightyear.backend.account.domain.AccountState.ACTIVE;
+import static com.golightyear.backend.account.domain.account.AccountState.ACTIVE;
 
 @Value
 @Builder(toBuilder = true)

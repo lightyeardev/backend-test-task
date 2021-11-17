@@ -1,4 +1,4 @@
-package com.golightyear.backend.account.domain;
+package com.golightyear.backend.account.domain.account;
 
 import com.golightyear.backend.common.SerializableValue;
 import lombok.Value;

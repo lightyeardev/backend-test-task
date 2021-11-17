@@ -1,9 +1,9 @@
 package com.golightyear.backend.account.presentation;
 
-import com.golightyear.backend.account.domain.Account;
-import com.golightyear.backend.account.domain.AccountId;
-import com.golightyear.backend.account.domain.AccountName;
-import com.golightyear.backend.account.domain.AccountState;
+import com.golightyear.backend.account.domain.account.Account;
+import com.golightyear.backend.account.domain.account.AccountId;
+import com.golightyear.backend.account.domain.account.AccountName;
+import com.golightyear.backend.account.domain.account.AccountState;
 import lombok.Value;
 
 import java.time.Instant;

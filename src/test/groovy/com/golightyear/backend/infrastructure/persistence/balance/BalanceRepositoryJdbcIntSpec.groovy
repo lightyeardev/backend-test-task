@@ -1,7 +1,7 @@
 package com.golightyear.backend.infrastructure.persistence.balance
 
 import com.golightyear.backend.AbstractIntegrationSpec
-import com.golightyear.backend.account.domain.BalanceRepository
+import com.golightyear.backend.account.domain.balance.BalanceRepository
 import com.golightyear.backend.testdata.BalanceTestData
 import org.springframework.beans.factory.annotation.Autowired
 

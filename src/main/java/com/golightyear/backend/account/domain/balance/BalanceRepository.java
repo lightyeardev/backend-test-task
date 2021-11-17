@@ -1,4 +1,6 @@
-package com.golightyear.backend.account.domain;
+package com.golightyear.backend.account.domain.balance;
+
+import com.golightyear.backend.account.domain.account.AccountId;
 
 import java.util.Optional;
 

@@ -1,9 +1,9 @@
 package com.golightyear.backend.infrastructure.persistence.balance;
 
-import com.golightyear.backend.account.domain.AccountId;
-import com.golightyear.backend.account.domain.Balance;
-import com.golightyear.backend.account.domain.BalanceAmount;
-import com.golightyear.backend.account.domain.BalanceId;
+import com.golightyear.backend.account.domain.account.AccountId;
+import com.golightyear.backend.account.domain.balance.Balance;
+import com.golightyear.backend.account.domain.balance.BalanceAmount;
+import com.golightyear.backend.account.domain.balance.BalanceId;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

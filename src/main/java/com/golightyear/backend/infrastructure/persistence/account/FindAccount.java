@@ -1,9 +1,8 @@
 package com.golightyear.backend.infrastructure.persistence.account;
 
-import com.golightyear.backend.account.domain.Account;
-import com.golightyear.backend.account.domain.AccountId;
+import com.golightyear.backend.account.domain.account.Account;
+import com.golightyear.backend.account.domain.account.AccountId;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
-import com.golightyear.backend.infrastructure.persistence.account.AccountRowMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 

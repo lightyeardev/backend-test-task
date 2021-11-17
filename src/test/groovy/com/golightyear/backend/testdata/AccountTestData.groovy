@@ -1,11 +1,11 @@
 package com.golightyear.backend.testdata
 
-import com.golightyear.backend.account.domain.Account
-import com.golightyear.backend.account.domain.AccountId
-import com.golightyear.backend.account.domain.AccountName
-import com.golightyear.backend.account.domain.AccountState
+import com.golightyear.backend.account.domain.account.Account
+import com.golightyear.backend.account.domain.account.AccountId
+import com.golightyear.backend.account.domain.account.AccountName
+import com.golightyear.backend.account.domain.account.AccountState
 
-import static com.golightyear.backend.account.domain.AccountState.ACTIVE
+import static com.golightyear.backend.account.domain.account.AccountState.ACTIVE
 
 class AccountTestData {
 

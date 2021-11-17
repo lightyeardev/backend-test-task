@@ -1,8 +1,8 @@
 package com.golightyear.backend.infrastructure.persistence.account;
 
-import com.golightyear.backend.account.domain.Account;
-import com.golightyear.backend.account.domain.AccountId;
-import com.golightyear.backend.account.domain.AccountRepository;
+import com.golightyear.backend.account.domain.account.Account;
+import com.golightyear.backend.account.domain.account.AccountId;
+import com.golightyear.backend.account.domain.account.AccountRepository;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
 
 import java.util.List;
