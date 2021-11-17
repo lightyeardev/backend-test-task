@@ -1,0 +1,13 @@
+@startuml
+package {
+
+    entity balance {
+        * account_id
+        * amount
+        * version
+        * create_time
+        * modified_time
+    }
+
+}
+@enduml

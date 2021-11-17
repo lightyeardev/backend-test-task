@@ -1,4 +1,4 @@
-package com.golightyear.backend.account
+package com.golightyear.backend.account.persistence
 
 import com.golightyear.backend.AbstractIntegrationSpec
 import com.golightyear.backend.account.domain.AccountId

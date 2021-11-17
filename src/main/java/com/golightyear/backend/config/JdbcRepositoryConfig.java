@@ -1,6 +1,6 @@
 package com.golightyear.backend.config;
 
-import com.golightyear.backend.account.AccountRepository;
+import com.golightyear.backend.account.persistence.AccountRepository;
 import com.golightyear.backend.account.persistence.AccountRepositoryJdbc;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
 import com.golightyear.backend.infrastructure.persistence.ParamsConvertingJdbcOperations;

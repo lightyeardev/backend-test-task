@@ -1,6 +1,7 @@
-package com.golightyear.backend.account
+package com.golightyear.backend.account.presentation
 
 import com.golightyear.backend.AbstractIntegrationSpec
+import com.golightyear.backend.account.persistence.AccountRepository
 import com.golightyear.backend.account.domain.AccountId
 import com.golightyear.backend.account.domain.AccountName
 import com.golightyear.backend.testdata.AccountTestData

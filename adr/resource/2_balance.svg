@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="157px" preserveAspectRatio="none" style="width:173px;height:157px;background:#FFFFFF;" version="1.1" viewBox="0 0 173 157" width="173px" zoomAndPan="magnify"><defs><filter height="300%" id="f81gnlhar4450" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><polygon fill="#FFFFFF" filter="url(#f81gnlhar4450)" points="16,6,51,6,58,16,156,16,156,150,16,150,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="58" y1="16" y2="16"/><!--MD5=[b192c216632b9a1aa368054373fd5e17]
+class balance--><rect codeLine="3" fill="#FEFECE" filter="url(#f81gnlhar4450)" height="112.0234" id="balance" style="stroke:#A80036;stroke-width:1.5;" width="108" x="32" y="22"/><ellipse cx="60.05" cy="38" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M58.8469,38.875 L60.3,38.875 L60.3,38.9844 C60.3,39.3906 60.3313,39.5469 60.4094,39.7031 C60.5656,39.9531 60.8469,40.1094 61.1438,40.1094 C61.3938,40.1094 61.6594,39.9688 61.8156,39.75 C61.9406,39.5938 61.9719,39.4375 61.9719,38.9844 L61.9719,37.0625 C61.9719,36.9063 61.9719,36.8594 61.9563,36.7031 C61.8938,36.2344 61.5813,35.9219 61.1281,35.9219 C60.8781,35.9219 60.6125,36.0625 60.4406,36.2813 C60.3313,36.4531 60.3,36.6094 60.3,37.0625 L60.3,37.1875 L58.8469,37.1875 L58.8469,34.7813 L62.8313,34.7813 L62.8313,35.6406 C62.8313,36.0469 62.8625,36.2188 62.9406,36.375 C63.1125,36.625 63.3938,36.7813 63.675,36.7813 C63.9406,36.7813 64.2063,36.6406 64.3781,36.4219 C64.4875,36.25 64.5188,36.1094 64.5188,35.6406 L64.5188,33.0938 L56.8938,33.0938 C56.4563,33.0938 56.3313,33.1094 56.175,33.2031 C55.925,33.3594 55.7688,33.6563 55.7688,33.9375 C55.7688,34.2188 55.9094,34.4688 56.1281,34.6406 C56.2844,34.75 56.4719,34.7813 56.8938,34.7813 L57.1438,34.7813 L57.1438,41.2969 L56.8938,41.2969 C56.4875,41.2969 56.3313,41.3125 56.175,41.4219 C55.925,41.5938 55.7688,41.8594 55.7688,42.1563 C55.7688,42.4219 55.9094,42.6719 56.1281,42.8281 C56.2688,42.9531 56.5031,43 56.8938,43 L64.8938,43 L64.8938,40.4219 C64.8938,39.9844 64.8625,39.8438 64.7844,39.6875 C64.6125,39.4375 64.3313,39.2813 64.05,39.2813 C63.7844,39.2813 63.5188,39.3906 63.3469,39.6406 C63.2375,39.7969 63.2063,39.9375 63.2063,40.4219 L63.2063,41.2969 L58.8469,41.2969 L58.8469,38.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="76.95" y="42.1543">balance</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="139" y1="54" y2="54"/><ellipse cx="43" cy="65" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="52" y="68.2104">account_id</text><ellipse cx="43" cy="77.8047" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="43" x="52" y="81.0151">amount</text><ellipse cx="43" cy="90.6094" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="52" y="93.8198">version</text><ellipse cx="43" cy="103.4141" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="52" y="106.6245">create_time</text><ellipse cx="43" cy="116.2188" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="52" y="119.4292">modified_time</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="139" y1="126.0234" y2="126.0234"/><!--MD5=[aa7953d47ce0ee454adc6c574616ba51]
+@startuml
+package {
+
+    entity balance {
+        * account_id
+        * amount
+        * version
+        * create_time
+        * modified_time
+    }
+
+}
+@enduml
+
+PlantUML version 1.2021.14beta4(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

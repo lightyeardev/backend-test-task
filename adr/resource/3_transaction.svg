@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="144px" preserveAspectRatio="none" style="width:217px;height:144px;background:#FFFFFF;" version="1.1" viewBox="0 0 217 144" width="217px" zoomAndPan="magnify"><defs><filter height="300%" id="f1t4r8472voykg" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><polygon fill="#FFFFFF" filter="url(#f1t4r8472voykg)" points="16,6,62,6,69,16,200,16,200,137,16,137,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="69" y1="16" y2="16"/><!--MD5=[afc5de82eab5d1d11ba6d761e4d7f9d0]
+class transaction--><rect codeLine="3" fill="#FEFECE" filter="url(#f1t4r8472voykg)" height="99.2188" id="transaction" style="stroke:#A80036;stroke-width:1.5;" width="152" x="32" y="22"/><ellipse cx="71.3" cy="38" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M70.0969,38.875 L71.55,38.875 L71.55,38.9844 C71.55,39.3906 71.5813,39.5469 71.6594,39.7031 C71.8156,39.9531 72.0969,40.1094 72.3938,40.1094 C72.6438,40.1094 72.9094,39.9688 73.0656,39.75 C73.1906,39.5938 73.2219,39.4375 73.2219,38.9844 L73.2219,37.0625 C73.2219,36.9063 73.2219,36.8594 73.2063,36.7031 C73.1438,36.2344 72.8313,35.9219 72.3781,35.9219 C72.1281,35.9219 71.8625,36.0625 71.6906,36.2813 C71.5813,36.4531 71.55,36.6094 71.55,37.0625 L71.55,37.1875 L70.0969,37.1875 L70.0969,34.7813 L74.0813,34.7813 L74.0813,35.6406 C74.0813,36.0469 74.1125,36.2188 74.1906,36.375 C74.3625,36.625 74.6438,36.7813 74.925,36.7813 C75.1906,36.7813 75.4563,36.6406 75.6281,36.4219 C75.7375,36.25 75.7688,36.1094 75.7688,35.6406 L75.7688,33.0938 L68.1438,33.0938 C67.7063,33.0938 67.5813,33.1094 67.425,33.2031 C67.175,33.3594 67.0188,33.6563 67.0188,33.9375 C67.0188,34.2188 67.1594,34.4688 67.3781,34.6406 C67.5344,34.75 67.7219,34.7813 68.1438,34.7813 L68.3938,34.7813 L68.3938,41.2969 L68.1438,41.2969 C67.7375,41.2969 67.5813,41.3125 67.425,41.4219 C67.175,41.5938 67.0188,41.8594 67.0188,42.1563 C67.0188,42.4219 67.1594,42.6719 67.3781,42.8281 C67.5188,42.9531 67.7531,43 68.1438,43 L76.1438,43 L76.1438,40.4219 C76.1438,39.9844 76.1125,39.8438 76.0344,39.6875 C75.8625,39.4375 75.5813,39.2813 75.3,39.2813 C75.0344,39.2813 74.7688,39.3906 74.5969,39.6406 C74.4875,39.7969 74.4563,39.9375 74.4563,40.4219 L74.4563,41.2969 L70.0969,41.2969 L70.0969,38.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="90.7" y="42.1543">transaction</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="183" y1="54" y2="54"/><ellipse cx="43" cy="65" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="10" x="52" y="68.2104">id</text><ellipse cx="43" cy="77.8047" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="52" y="81.0151">account_id</text><ellipse cx="43" cy="90.6094" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="52" y="93.8198">type {DEBIT, CREDIT}</text><ellipse cx="43" cy="103.4141" fill="#000000" rx="3" ry="3" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="52" y="106.6245">create_time</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33" x2="183" y1="113.2188" y2="113.2188"/><!--MD5=[b2ab47ad0153a86458614d3947bded7c]
+@startuml
+package {
+
+    entity transaction {
+        * id
+        * account_id
+        * type {DEBIT, CREDIT}
+        * create_time
+    }
+
+}
+@enduml
+
+PlantUML version 1.2021.14beta4(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

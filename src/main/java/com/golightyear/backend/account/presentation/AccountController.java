@@ -1,5 +1,6 @@
-package com.golightyear.backend.account;
+package com.golightyear.backend.account.presentation;
 
+import com.golightyear.backend.account.persistence.AccountRepository;
 import com.golightyear.backend.account.domain.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

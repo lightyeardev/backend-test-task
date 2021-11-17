@@ -27,5 +27,4 @@ public class Account {
 
     @Builder.Default
     Instant lastModified = Instant.now();
-
 }

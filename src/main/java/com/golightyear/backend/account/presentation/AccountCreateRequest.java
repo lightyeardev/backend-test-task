@@ -1,4 +1,4 @@
-package com.golightyear.backend.account.domain;
+package com.golightyear.backend.account.presentation;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.AllArgsConstructor;

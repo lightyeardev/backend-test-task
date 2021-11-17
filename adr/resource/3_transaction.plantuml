@@ -1,0 +1,12 @@
+@startuml
+package {
+
+    entity transaction {
+        * id
+        * account_id
+        * type {DEBIT, CREDIT}
+        * create_time
+    }
+
+}
+@enduml
