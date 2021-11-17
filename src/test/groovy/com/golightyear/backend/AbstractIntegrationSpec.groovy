@@ -1,5 +1,7 @@
 package com.golightyear.backend
 
+import org.flywaydb.core.Flyway
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.ApplicationContextInitializer
@@ -16,6 +18,8 @@ import java.util.stream.Stream
 @AutoConfigureMockMvc
 @ContextConfiguration(initializers = Initializer.class)
 abstract class AbstractIntegrationSpec extends Specification {
+    @Autowired
+    Flyway flyway
 
     static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
@@ -43,5 +47,13 @@ abstract class AbstractIntegrationSpec extends Specification {
                     "spring.datasource.password", postgres.getPassword(),
             )
         }
+    }
+
+    def setup() {
+        flyway.migrate()
+    }
+
+    def cleanup() {
+        flyway.clean()
     }
 }

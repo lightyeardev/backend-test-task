@@ -1,7 +1,4 @@
-package com.golightyear.backend.account.persistence;
-
-import com.golightyear.backend.account.domain.Account;
-import com.golightyear.backend.account.domain.AccountId;
+package com.golightyear.backend.account.domain;
 
 import java.util.List;
 import java.util.Optional;

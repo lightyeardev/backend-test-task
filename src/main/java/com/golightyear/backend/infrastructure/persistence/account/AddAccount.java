@@ -1,4 +1,4 @@
-package com.golightyear.backend.account.persistence;
+package com.golightyear.backend.infrastructure.persistence.account;
 
 import com.golightyear.backend.account.domain.Account;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
@@ -14,6 +14,7 @@ public class AddAccount {
         VALUES (:id, :version, :name, :state, :createTime, :lastModified)
         ON CONFLICT (id) DO UPDATE SET
             name = :name,
+            version = :version,
             state = :state,
             last_modified = :lastModified
         """;

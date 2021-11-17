@@ -1,9 +1,9 @@
-package com.golightyear.backend.account.persistence;
+package com.golightyear.backend.infrastructure.persistence.account;
 
 import com.golightyear.backend.account.domain.Account;
 import com.golightyear.backend.account.domain.AccountId;
+import com.golightyear.backend.account.domain.AccountRepository;
 import com.golightyear.backend.infrastructure.persistence.ApplicationJdbcOperations;
-import com.golightyear.backend.infrastructure.persistence.account.AccountRowMapper;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,11 +11,13 @@ import java.util.Optional;
 public class AccountRepositoryJdbc implements AccountRepository {
     private final AddAccount addAccount;
     private final FindAccount findAccount;
+    private final FindAllAccount findAllAccount;
 
     public AccountRepositoryJdbc(ApplicationJdbcOperations jdbcOperations) {
         var mapper = new AccountRowMapper();
         this.addAccount = new AddAccount(jdbcOperations);
         this.findAccount = new FindAccount(jdbcOperations, mapper);
+        this.findAllAccount = new FindAllAccount(jdbcOperations, mapper);
     }
 
     @Override
@@ -25,7 +27,7 @@ public class AccountRepositoryJdbc implements AccountRepository {
 
     @Override
     public List<Account> findAll() {
-        return List.of();
+        return findAllAccount.execute();
     }
 
     @Override

@@ -1,7 +1,8 @@
 package com.golightyear.backend.account.presentation;
 
-import com.golightyear.backend.account.persistence.AccountRepository;
-import com.golightyear.backend.account.domain.*;
+import com.golightyear.backend.account.application.AccountService;
+import com.golightyear.backend.account.domain.Account;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,40 +15,36 @@ import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
 @RequestMapping("account")
+@AllArgsConstructor
 public class AccountController {
-
-    private final AccountRepository accountRepository;
-
-    public AccountController(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
+    private final AccountService accountService;
 
     @PostMapping
     public ResponseEntity<Account> add(@RequestBody AccountCreateRequest request) {
-        final var account = Account.builder()
-                .name(new AccountName(request.name()))
-                .build();
-
-        accountRepository.add(account);
-        return ok(account);
+        return ok(accountService.create(request.name()));
     }
 
     @GetMapping
     public ResponseEntity<List<AccountResponse>> findAll() {
-        final var responses = accountRepository.findAll().stream()
-                .map(AccountResponse::from)
-                .collect(toList());
-
-        return ok(responses);
+        return ok(accountService.findAll().stream()
+            .map(AccountResponse::from)
+            .collect(toList()));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<AccountResponse> find(@PathVariable("id") String id) {
-        return accountRepository
-                .find(new AccountId(id))
-                .map(AccountResponse::from)
-                .map(ResponseEntity::ok)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+        return accountService
+            .find(id)
+            .map(AccountResponse::from)
+            .map(ResponseEntity::ok)
+            .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
     }
 
+    @GetMapping("/{id}/balance")
+    public ResponseEntity<BalanceResponse> balance(@PathVariable("id") String id) {
+        return accountService.balance(id)
+            .map(BalanceResponse::from)
+            .map(ResponseEntity::ok)
+            .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+    }
 }
