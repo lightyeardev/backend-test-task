@@ -14,4 +14,7 @@ public interface AccountRepository {
 
     Optional<Account> find(AccountId id);
 
+    Optional<Account> findAndLock(AccountId id);
+
+    void updateActivities(Account account);
 }

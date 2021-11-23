@@ -1,6 +1,7 @@
-package com.golightyear.backend.account
+package com.golightyear.backend.account.infrastructure
 
 import com.golightyear.backend.AbstractIntegrationSpec
+import com.golightyear.backend.account.AccountRepository
 import com.golightyear.backend.account.domain.AccountId
 import com.golightyear.backend.testdata.AccountTestData
 import org.springframework.beans.factory.annotation.Autowired
